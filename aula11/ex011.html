@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+</head>
+<body>
+    <h1>Estrangeiro ou Brasileiro</h1>
+    <p>Veja agora se você é Estrangeiro ou Brasileiro</p>
+     Digite aqui o país que nasceu : <input type="text" id="Pais">
+     <input type="button" value="Verificar" onclick="verificar()">
+     <div id="Res"></div>
+     <script>
+        function verificar(){
+            var pais = document.getElementById('Pais')
+            var res = document.getElementById('Res')
+            if(pais.value == 'Brasil' || pais.value == 'brasil'){
+               res.innerHTML = `<p>Você mora no <strong>${pais.value}</strong> então é <strong>Brasileiro !</strong></p>`
+            }
+            else {
+                res.innerHTML = `<p>Você mora no(a) <strong>${pais.value}</strong> então é <strong>Estrangeiro !</strong></p>`
+            }
+        }
+     </script>
+</body>
+</html>
